@@ -1,14 +1,43 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>NgVsts</title>
+
+  <head>
+    <title>Build Tracker</title>
+    <script src="../sdk/VSS.SDK.js"></script>
+    <script src="../dist/inline.bundle.js"></script>
+    <script src="../dist/main.bundle.js"></script>
+    <script src="../dist/polyfills.bundle.js"></script>
+    <script src="../dist/styles.bundle.js"></script>
+    <script src="../dist/vendor.bundle.js"></script>
+
+    <script type="text/javascript">
+      VSS.init({
+        usePlatformScripts: true,
+        moduleLoaderConfig: {
+          paths: {
+            "test": "dist"
+          }
+        }
+      });
+
+      VSS.ready(function () {
+        VSS.notifyLoadSucceeded();
+      });
+    </script>
+  </head>
+
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
   <app-root>Loading...</app-root>
 </body>
+
 </html>
