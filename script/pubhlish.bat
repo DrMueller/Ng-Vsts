@@ -1,0 +1,1 @@
+Powershell.exe -executionpolicy remotesigned -File  C:\MyGit\Personal\ng-vsts\script\internals\publish.ps1

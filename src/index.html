@@ -8,20 +8,15 @@
   <head>
     <title>Build Tracker</title>
     <script src="../sdk/VSS.SDK.js"></script>
-    <script src="../dist/inline.bundle.js"></script>
-    <script src="../dist/polyfills.bundle.js"></script>
-    <script src="../dist/styles.bundle.js"></script>
-    <script src="../dist/vendor.bundle.js"></script>
-    <script src="../dist/main.bundle.js"></script>
+    <script type="text/javascript" src="inline.bundle.js"></script>
+    <script type="text/javascript" src="polyfills.bundle.js">
+    </script>
+    <script type="text/javascript" src="styles.bundle.js"></script>
+    <script type="text/javascript" src="vendor.bundle.js"></script>
 
     <script type="text/javascript">
       VSS.init({
-        usePlatformScripts: true,
-        moduleLoaderConfig: {
-          paths: {
-            "test": "dist"
-          }
-        }
+        usePlatformScripts: true
       });
 
       VSS.ready(function () {
